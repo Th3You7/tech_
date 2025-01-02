@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1152px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 74px);
+  grid-column-gap: 22px;
+  margin: 0 auto;
+}
+.arrow {
+  width: 1.25rem;
+  height: 1rem;
+  display: inline-block;
+  position: relative;
+  /* margin: 0 1rem; */
+}
+
+.arrow span {
+  top: 0.5rem;
+  position: absolute;
+  width: 0.75rem;
+  height: 0.1rem;
+  background-color: #000;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+.arrow span:first-of-type {
+  left: 0;
+  transform: rotate(45deg);
+}
+.arrow span:last-of-type {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+header {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 0;
+}
+
+#logo {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  grid-column-start: 6;
+  grid-column-end: span 7;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  /* padding: 0 4px; */
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-links li:nth-of-type(2) a {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-links li a#register-btn {
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover {
+  color: #555;
+}
+.nav-links li a:hover .arrow span {
+  background-color: #555;
+}
+
+.nav-links li a:hover .arrow span:first-of-type {
+  transform: rotate(-45deg);
+}
+
+.nav-links li a:hover .arrow span:last-of-type {
+  transform: rotate(45deg);
+}
+
+.nav-links li a#register-btn:hover {
+  background-color: #555;
+}
+
+.slider {
+  width: 100%;
+  height: calc(100vh - 54.5px);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  color: #fff;
+  word-spacing: 3%;
+  font-size: 160px;
+  font-weight: bold;
+  grid-column-start: 3;
+  grid-column-end: span 8;
+  text-align: center;
+}
+
+.subheading {
+  color: #fff;
+  font-weight: bold;
+  grid-column-start: 3;
+  grid-column-end: span 8;
+  text-align: center;
+}
